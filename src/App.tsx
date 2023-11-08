@@ -1,19 +1,27 @@
 import { useState } from 'react'
 import styles from './App.module.css'
 import logo from './assets/powered.png'
-import { levels } from './helpers/imc'
+import Arrow from './assets/leftarrow.png'
+import { Level, calculateImc, levels } from './helpers/imc'
 import { GridItem } from './components/GridItem'
 
 function App() {
   const [heightField, setHeightField] = useState<number>(0)
   const [weighttField, setWeightField] = useState<number>(0)
+  const [toShow, setToShow] = useState<Level | null>(null)
 
   const handleCalculateIMC = () => {
     if(heightField && weighttField) {
-
+      setToShow(calculateImc(heightField, weighttField))
     } else {
       alert('Preencha todos os Campos')
     }
+  }
+
+  const handleBackButton = () => {
+    setToShow(null)
+    setHeightField(0)
+    setWeightField(0)
   }
 
   return (
@@ -47,11 +55,22 @@ function App() {
           >Calcular IMC</button>
         </div>
         <div className={styles.rightSide}>
-          <div className={styles.grid}>
-            {levels.map((item, key) => (
-              <GridItem key={key} item={item} />
-            ))}
-          </div>
+          {!toShow &&
+            <div className={styles.grid}>
+              {levels.map((item, key) => (
+                <GridItem key={key} item={item} />
+              ))}
+            </div>
+          }
+
+          {toShow &&
+            <div className={styles.rightBig}>
+              <div className={styles.rightArrow} onClick={handleBackButton}>
+                <img src={Arrow} alt="Botão de Voltar" width={25}/>
+              </div>
+              <GridItem item={toShow} />
+            </div>
+          }
         </div>
       </div>
     </div>
