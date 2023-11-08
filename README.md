@@ -1,27 +1,36 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Calculadora em IMC
 
-Currently, two official plugins are available:
+Projeto realizado em React com Typescript, o projeto foi realizado sem nenhum framework de estilização, o projeto tem o objetivo calcular o IMC através da obtensão de dados e mostrar na tela o resultado em que categoria está localizado o IMC obtido.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+## Deploy
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+O Projeto está em hospedagem na Vercel o link esta abaixo:
 
-- Configure the top-level `parserOptions` property like this:
+Link: https://calculadora-imc-six-teal.vercel.app/
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+
+## Instalação
+
+Instalação das dependencias do projeto
+
+```bash
+  npm install
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Rodar o Codigo do Projeto
+
+```
+    npm start
+```
+    
+## Aprendizados
+
+Aprendi a usar mais hooks do React com Typescript e criar e mostrar resultados dinamicamente com CSS e React, e tambem utilização de dados para percorrer para obter resultados para mostrar na interface.
+
+
+## Autores
+
+- [RonaldMamani](https://github.com/RonaldMamani)
+
