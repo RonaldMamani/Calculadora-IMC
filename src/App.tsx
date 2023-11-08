@@ -38,19 +38,19 @@ function App() {
           <input 
             type="number" 
             placeholder='Digite sua Altura Ex: 1.8 (Em Metros)'
-            className=''
+            disabled={toShow ? true : false}
             value={heightField > 0 ? heightField : ''}
             onChange={e => setHeightField(+e.target.value)}
           />
           <input 
             type="number" 
             placeholder='Digite seu Peso Ex: 75 (Em Kilos)'
-            className=''
+            disabled={toShow ? true : false}
             value={weighttField > 0 ? weighttField : ''}
             onChange={e => setWeightField(+e.target.value)}
           />
           <button
-            className=''
+            disabled={toShow ? true : false}
             onClick={handleCalculateIMC}
           >Calcular IMC</button>
         </div>

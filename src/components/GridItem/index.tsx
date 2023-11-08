@@ -26,7 +26,7 @@ export const GridItem = ({item} : Props) => {
             }
 
             <div className={styles.gridInfo}>
-                <p>IMC está entre <strong>{item.imc[0]}</strong> e <strong>{item.imc[1]}</strong></p>
+                <p>IMC está entre <strong>{item.imc[0]}</strong> até <strong>{item.imc[1].toFixed(1)}</strong></p>
             </div>
         </div>
     )
